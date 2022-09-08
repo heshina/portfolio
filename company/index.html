@@ -8,30 +8,75 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     <style>
       .navbar-default {
         background-color: #63abcf;
         border-color: #63abcf;
-        opacity: 0.8;
+        opacity: 0.9;
+      }
+      #subject h1, #community h1, #maps h1{
+        font-family: 'Noto Serif KR', serif;
+        font-weight: bold;
+        color: rgb(53, 52, 52);
       }
       nav a{
-        color:rgb(255, 255, 255) !important
+        color:white !important
       }
       .carousel-inner img{
           width: 100%; 
           height: 70% !important;
       }
+      .carousel-caption {
+        position: absolute;
+        top: 28%;
+        font-family: 'Do Hyeon', sans-serif;
+      }
+      .carousel-caption h1{
+        font-size: 50px;
+      }
+      #myNavbar>a, .thumnail p .btn, .tab-content h3 ul, footer>div>p{
+        font-family: 'Noto Sans KR', sans-serif;
+      }
       .time{
           color: brown;
       }
+      .btn{
+        background-color: #63abcf;
+        color: white;
+        font-weight: bold;
+      }
+      
+      #community  h3{
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 8px;
+        color: rgb(53, 52, 52)
+      }
+
       .container h1, .container-fluid h1{
         margin-top: 100px;
         margin-bottom: 30px;
       }
+
+      @media (max-width: 768px){
+        #footer .col-sm-1 .col-sm-11 {
+          flex-direction: column-reverse;
+        }
+      }
+      
       /* footer>div div{
         padding-top: 10px;
         padding-bottom: 10px;
       } */
+      @media(max-width:768px){
+        #footer .col-sm-11{
+          text-align: center;
+        }
+      }
     </style>
     <script>
       $(document).ready(function(){
@@ -97,25 +142,25 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img src="img/pic01.jpg" alt="New York">
+            <img src="img/pic01.jpg" alt="New York style="opacity: 0.9;>
             <div class="carousel-caption">
-              <h1>4차 산업혁명을 선도하는 IT 신기술 교육의 메카</h1>
+              <h1 class="animate__animated animate__heartBeat">4차 산업혁명을 선도하는 IT 신기술 교육의 메카</h1>
               <h3>최신 IT 트렌드를 접목한 실무 중심의 교육으로 대한민국 4차 산업혁명 시대의 미래를 열어가겠습니다.</h3>
             </div>
           </div>
       
           <div class="item">
-            <img src="img/pic02.jpg" alt="Chicago">
+            <img src="img/pic03.jpg" alt="Chicago style="opacity: 0.9;>
             <div class="carousel-caption">
-              <h1>다양한 채널을 통한 맞춤형 취업연계 시스템</h1>
+              <h1 class="animate__animated animate__heartBeat">다양한 채널을 통한 맞춤형 취업연계 시스템</h1>
               <h3>수많은 기업체와 대학교 및 공공기관과의 전략적 제휴와 상호 협력으로 맞춤형 취업을 연계합니다.</h3>
             </div>
           </div>
       
           <div class="item">
-            <img src="img/pic03.jpg" alt="Los Angeles">
+            <img src="img/pic02.jpg" alt="Los Angeles" style="opacity: 0.9;">
             <div class="carousel-caption">
-              <h1>Our Goal is Your Success</h1>
+              <h1 class="animate__animated animate__heartBeat">Our Goal is Your Success</h1>
               <h3>TIS정보기술교육센터의 목표는 당신의 성공입니다.<br>
                   TIS정보기술교육센터에서 당신의 꿈을 펼쳐보세요!
               </h3>
@@ -142,33 +187,33 @@
             <div class="col-sm-3">
               <div class="thumbnail">
                 <img src="img/pic04.jpg" alt="Paris">
-                <p><strong>웹&앱 콘텐츠 융합 자바(JAVA) 응용sw 및 웹개발자 양성 과정</strong></p>
-                <p>교육기간:22.09.19~23.02.15 <br><span class="time">(5개월/900시간)</span></p>
+                <p style="margin-top:10px;"><strong>웹&앱 콘텐츠 융합 자바(JAVA) 응용sw 및 웹개발자 양성 과정</strong></p>
+                <p>교육기간:22.09.19~23.02.15<br><span class="time">(5개월/900시간)</span></p>
                 <button class="btn">과정상세보기</button>
               </div>
             </div>
             <div class="col-sm-3">
               <div class="thumbnail">
                 <img src="img/pic05.jpg" alt="New York">
-                <p><strong>New York</strong></p>
-                <p>Sat. 28 November 2015</p>
-                <button class="btn">Buy Tickets</button>
+                <p style="margin-top:10px;"><strong>UI/UX 기반의 웹퍼블리셔&프론트엔드 웹개발자 양성 과정</strong></p>
+                <p>교육기간:22.09.26~22.18.28<br><span class="time">(3개월/520시간)</span></p>
+                <button class="btn">과정상세보기</button>
               </div>
             </div>
             <div class="col-sm-3">
               <div class="thumbnail">
                 <img src="img/pic06.jpg" alt="San Francisco">
-                <p><strong>San Francisco</strong></p>
-                <p>Sun. 29 November 2015</p>
-                <button class="btn">Buy Tickets</button>
+                <p style="margin-top:10px;"><strong>UI/UX 기반의 프론트엔드 웹개발자 양성 과정</strong></p>
+                <p>교육기간:22.11.24~22.12.28<br><span class="time">(5주/200시간)</span></p>
+                <button class="btn">과정상세보기</button>
               </div>
             </div>
             <div class="col-sm-3">
               <div class="thumbnail">
                 <img src="img/pic07.jpg" alt="San Francisco">
-                <p><strong>San Francisco</strong></p>
-                <p>Sun. 29 November 2015</p>
-                <button class="btn">Buy Tickets</button>
+                <p style="margin-top:10px;"><strong>스마트 콘텐츠 융합 자바(JAVA) 응용SW 및 웹개발자 양성 과정</strong></p>
+                <p>교육기간:22.11.29~23.04.27<br><span class="time">(5개월/900시간)</span></p>
+                <button class="btn">과정상세보기</button>
               </div>
             </div>
           </div>
@@ -198,16 +243,16 @@
             <h3>자주묻는 질문</h3>
             <ul class="list-group">
               <li class="list-group-item">교육센터에서 수료율과 취업률, 고용유지율 등의 교육 결과(성과)를 중요 시 하는 이유가 있나요?</li>
-              <li class="list-group-item">2022년도 데이터 자격검정 시험일정입니다.</li>
-              <li class="list-group-item">스텝(STEP) 학습시 주의사항</li>
+              <li class="list-group-item">국민내일배움카드 지원 한도와 국비 교육 수강 횟수에 제한이 있나요?</li>
+              <li class="list-group-item">국민내일배움카드 발급을 받지 못하거나 이미 지원을 받아 국비지원이 안되면 교육수강이 안되나요?</li>
             </ul>
           </div>
           <div id="menu2" class="tab-pane fade">
             <h3>서식자료실</h3>
             <ul class="list-group">
-              <li class="list-group-item">교육센터에서 수료율과 취업률, 고용유지율 등의 교육 결과(성과)를 중요 시 하는 이유가 있나요?</li>
-              <li class="list-group-item">2022년도 데이터 자격검정 시험일정입니다.</li>
-              <li class="list-group-item">스텝(STEP) 학습시 주의사항</li>
+              <li class="list-group-item">스마트혼합훈련(STEP) 매뉴얼(원격보조훈련 진행시)</li>
+              <li class="list-group-item">ZOOM 프로그램 설치 매뉴얼(실시간 원격훈련 진행시)</li>
+              <li class="list-group-item">HRD출결시스템 매뉴얼(집체훈련 및 원격훈련시 사용)</li>
             </ul>
           </div>
         </div>
@@ -246,18 +291,18 @@
       <!--오시는길----------->
 
       <!--footer--------------------------------------------------------------------------->
-      <footer>
+      <footer id="footer">
       <div class="container-fluid" style="background-color:rgb(53, 52, 52); margin-top: 30px;">
         <div class="container" style="color: rgb(139, 138, 138); padding-top: 60px; padding-bottom: 40px;">
-          <div class="col-sm-8">
-          <p style="font-weight:bold">㈜티아이에스정보시스템 / 티아이에스정보기술교육센터 / 대표이사 : 김휘준 <br>
+          <div class="col-sm-11" >
+          <p  style="font-weight:bold">㈜티아이에스정보시스템 / 티아이에스정보기술교육센터 / 대표이사 : 김휘준 <br>
           사업자등록번호 : 113-86-70392 / 통신판매업신고 : 제2015-서울영등포-0490호<br>
           수강&입학문의 : 02-2069-1931 / 업무문의 : 02-2069-1930 / 팩스 : 02-2069-1932 / 개인정보책임자 : 이형석</p>
           <p style="font-weight:bold">(우: 70255) 서울특별시 영등포구 선유로 130 (지번 : 양평동 3가 5-4번지), 에이스하이테크시티3차 2층(교무실 : 212호, 강의실 : 202호, 210호, 211호)</p>
           COPYRIGHT © 2013 TIS Information Technology Education Center. All RIGHTS RESERVED.
         </div>
-        <div class="col-sm-4">
-          <img src="img/logo2.png" alt="로고2">
+        <div class="col-sm-1" >
+          <img src="img/logo2.png" alt="로고2" style="padding-top: 15px;">
         </div>
         </div>
       </div>
