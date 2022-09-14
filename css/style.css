@@ -302,7 +302,7 @@ li {
     4. Header
 -------------------------------------------------------------*/
 header {
-  background-image: url("../images/hero.png");
+  background-image: url("../images/main.jpg");
   width: 100vw;
   height: 75vh;
   background-size: cover;
@@ -565,12 +565,31 @@ div.cont{
 .work-info  {
   color: #1B1B1B!important;
 }
-.work-info p:nth-child(1) {
+
+/*포트폴리오 링크 다 걸면 지워야 하는 코드*/
+.work-info p:nth-child(1){
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
 }
+
+.work-info p:nth-child(1) a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.work-info p:nth-child(1)>a{
+  color:#1B1B1B;
+}
+
+.work-info p:nth-child(1):hover{
+  text-decoration-line: underline;
+  /* cursor: pointer; */
+}
+
 .work-info p:nth-child(2) {
   font-size: 0.8rem;
 }
