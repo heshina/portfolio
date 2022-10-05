@@ -227,7 +227,7 @@ li {
 .nav-btn span {
   width: 40px;
   height: 4px;
-  background-color: #FFE600;
+  background-color: #a691c2;
   display: block;
   border-radius: 2px;
   -webkit-transition: all 0.125s ease-in-out;
@@ -253,17 +253,17 @@ li {
  margin-top: -24px;
 }
 .learn-more-btn a {
-  background-color: #FFE600;
+  background-color: #a691c2;
   padding: 18px 40px;
   text-transform: uppercase;
   font-size: 0.6rem;
   font-weight: 600;
   letter-spacing: 0.2rem;
-  border: 1px solid #FFE600;
+  border: 1px solid #ffffff;
 }
 .learn-more-btn a:hover {
   background-color: transparent;
-  border: 1px solid #FFE600;
+  border: 1px solid #a691c2;
   color: #fbfbfb;
 }
 .portfolio-btn {
@@ -272,13 +272,13 @@ li {
 }
 .portfolio-btn a {
   padding: 20px 40px;
-  background-color: #FFE600;
+  background-color: #a691c2;
   font-size: 0.7rem;
   font-weight: 600;
-  border: 1px solid #FFE600;
+  border: 1px solid #a691c2;
 }
 .portfolio-btn a:hover {
-  border: 1px solid #FFE600;
+  border: 1px solid #a691c2;
   background-color: transparent;
   -webkit-transition: all 0.125s ease-in-out;
   -moz-transition: all 0.125s ease-in-out;
@@ -289,13 +289,13 @@ li {
   text-align: center;
 }
 .video-btn a {
-  color: #FFE600;
-  border: 1px solid #FFE600;
+  color: #a691c2;
+  border: 1px solid #a691c2;
   padding: 30px 60px;
   font-weight: 600;
 }
 .video-btn a:hover {
-  background-color: #FFE600;
+  background-color: #a691c2;
   color: #1B1B1B;
 }
 /*-----------------------------------------------------------
@@ -369,7 +369,7 @@ nav {
   padding: 30px 0px;
 }
 .nav ul li a:hover {
-  color: #FFE600;
+  color: #a691c2;
 }
 .open {
   right: 420px;
@@ -436,7 +436,7 @@ nav {
   margin: 10px 0px;
 }
 .progress-made {
-  background-color: #FFE600;
+  background-color: #a691c2;
   height: 6px;
 }
 .progress-ps {
@@ -517,7 +517,7 @@ nav {
   margin: 0px 30px;
 }
 #filter a:hover {
-  border-bottom: 3px solid #FFE600;
+  border-bottom: 3px solid #a691c2;
 }
 div.imgs img{
   width:100%;
@@ -554,7 +554,7 @@ div.cont{
   position: absolute;
   width: 70%;
   height: 80%;
-  background-color: #FFE600;
+  background-color: #a691c2;
   left: 15%;
   top: 10%;
   opacity: 0;
@@ -643,7 +643,7 @@ div.cont{
   position: relative;
 }
 .team-name {
-  background-color: #FFE600;
+  background-color: #a691c2;
   width: 100%;
   position: absolute;
   left: 0;
@@ -698,7 +698,7 @@ div.cont{
 .quote-bg-rect {
   width: 100%;
   height: 210px;
-  background-color: #FFE600; 
+  background-color: #a691c2; 
   position: absolute;
   bottom: 180px;
   z-index: -999;
@@ -724,7 +724,7 @@ footer {
   margin: 30px 0px;
 }
 .footer-info p a {
-  color: #FFE600;
+  color: #a691c2;
 }
 .footer-info p a:hover {
   color: #fff;
@@ -746,18 +746,18 @@ footer {
   font-size: 0.8rem;
 }
 .footer-btn a {
-  background-color: #FFE600;
+  background-color: #a691c2;
   padding: 15px 100px;
   border-radius: 25px;
   font-weight: 600;
-  border: 1px solid #FFE600;
+  border: 1px solid white;
 }
 .footer-btn {
   margin-top: 45px;
 }
 .footer-btn a:hover {
   background-color: transparent;
-  border: 1px solid #FFE600;
+  border: 1px solid #a691c2;
   color: #BABABA;
 }
 .social {
