@@ -1,0 +1,65 @@
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+
+*{margin:0; padding:0;}
+ul,ol{list-style-type: none;}
+a{text-decoration: none; color:#bbb; font-family: 'Playfair Display', serif !important;}
+body{position: pixed; width: 100%; height: 100%; background-color: #111; }
+
+
+/*배경 동영상*/
+.video-background {
+    background: #000;
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -99;
+}
+.video-foreground, .video-background iframe {
+    position: absolute;
+    top: 3%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/*로고*/
+h1{position:fixed; top:3px; left:44.2%; z-index:10;}
+h1 img { width:190px; height:auto;}
+header { width:100%; height:160px; position:fixed; top:0px; background:linear-gradient(-60deg,#c5bbae, #c69d67, #634928); transform:skewX-(90deg);}
+
+/* 메뉴*/
+
+#gnb { 	position:absolute; width:100%; top:110px; text-align: center;}
+#gnb>li {display: inline-block; position: relative; top: 10px; }
+#gnb>li>a { display:inline-block; width:200px; height:40px; font:bold; font-size: 17px; color:#68574C; box-sizing:border-box; padding-top:5px;text-align:center; }
+#gnb>li.on>a { background:#68574C; color:#fff;}         
+#gnb>li:hover>a { background:#68574C; color:#fff;}
+
+/* 활성화 탭 */
+.on a em div{
+    margin-left: 30px;
+    margin-right: -30px;
+    float: left;
+    animation : arrowIcon 0.5s
+                linear 0s
+                infinite alternate;}
+
+/*메뉴 리스트*/
+#gnb li{display: inline-block; font-size: 16px;}
+#gnb ul{position: absolute; left:0; top:0; opacity: 0; transition: 0.4s;}
+#gnb>li:hover ul{opacity: 0.8; top:30px;}
+#gnb ul a { display:block; width:200px; height:auto; background:#68574C; border-bottom:1px solid #514239;  font-family: 'Playfair Display', serif !important; color:#fff; box-sizing:border-box; padding-top:8px; padding-bottom:5px; padding-right: 10px; text-align: right; transition:all 0.5s;}
+#gnb ul a:hover { background:#c5bbae; color:#333; }
+
+/* sns 버튼 */
+#sns { position:fixed; top:120px; right:20px;}
+#sns li { float:left; margin-right:30px;}
+#sns .fa { font-size:25px; color:#68574C; opacity:0.5;	transform:scale(1); transition:all 0.5s;}
+#sns .fa:hover { opacity:1; transform:scale(1.5);}
+
+@keyframes arrowIcon {
+    0%{padding-top: 0px;}
+    100% {padding-top: 10px;}
+}

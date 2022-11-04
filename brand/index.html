@@ -4,164 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patek Philippe</title>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <title>Vogue</title>
-
-    <style>
-        @import url(http://fonts.googleapis.com/css?family=Orbitron);
-        /*    Reset CSS  */
-        * { margin:0;  padding:0;}
-        ol,ul { list-style: none; }
-        body {position:fixed;  width:100%; height:100%; background:#111;  font-family:orbitron; }
-        a {text-decoration:none; color:#bbb;}
-
-        .wrap { position:fixed; width:100%; height:100%; min-width:1024px; min-height:768px;	perspective:900px;}/*원근 처리*/
-
-        /* 메뉴 호출 버튼 */
-        .btnMenu { position:fixed; top:50px; left:40px; display:inline-block; width:20px; height:70px;	text-align:center; font-size:40px; color:#fff; z-index:3; animation:ani 0.5s infinite  alternate;}
-        @keyframes ani {
-            0% { transform:scale(1); opacity:1; color:#fff;}
-            100% { transform:scale(1.5); opacity:0.8; color:#888;}
-        }
-
-        /* 카테고리 그룹 */
-        nav { position:fixed; width:150px;height:100%; background:#eee;	z-index:2; opacity: 0; transition: 1s; transform: rotateY(120deg);}
-        nav.on{opacity: 1; transform: rotateY(15deg);}
-
-        /* 로고 */
-        nav h1 { width:100px; position:absolute; top:80px; left:50%; margin-left:-50px;}
-        nav h1 img { width:100%; height:auto; }
-
-        /* 카테고리 메뉴 */
-        nav ul { position:absolute; top:35%; left:0px; width:100%;}
-        nav li a { display:block; width:100%; box-sizing:border-box; font-size:18px; line-height:4; color:#000; text-align:center; transition: 0.5s;}
-        nav li a:hover { color:#fff;background:#000;}
-
-        /* 컨텐츠 그룹*/
-        section { position:fixed; width:100%; height:100%; z-index:1; transition: 0.5s;}
-        section.on { transform:rotateY(-10deg);} /*★ 섹션에 .on이 붙으면 회전함*/
-        section>div { position:absolute;width:100%; height:100%; z-index:1;	opacity:0; transition: 0.5s; }
-        section>div.on { opacity:1;}
-        section>div>p { box-sizing:border-box; text-align:center; overflow:hidden; transform:rotateY(180deg);	transition: 1.5s;}
-        section>div.on>p { transform:rotateY(0);}
-
-        /* box1 */
-        .box1>p {	height:25%;	float:left;	text-align:center;	position:relative;}
-        .box1>p:nth-child(1) { width:50%; background-color:#333;}
-        .box1>p:nth-child(2) { width:25%; background:#ccc; background:url(../img/m1.jpg) no-repeat right center; background-size:cover;}
-        .box1>p:nth-child(3) { width:25%; background:#444;	}
-        .box1>p:nth-child(3) ul { position:absolute; top:50%;}
-        .box1>p:nth-child(4) { width:50%;height:50%;background:url(../img/m2.jpg) no-repeat center top; background-size:cover; float:right}
-        .box1>p:nth-child(5) { width:25%;background:url(../img/m3.jpg) no-repeat left center; background-color:#fff; background-size:contain; float:right}
-        .box1>p:nth-child(6) { width:25%; background:#888; float:right;}
-        .box1>p:nth-child(7) { width:25%; background:#444; float:right;}
-        .box1>p:nth-child(8) { width:25%; background:url(../img/m4.jpg) no-repeat center center; background-size:cover; float:right;}
-        .box1>p:nth-child(9) { width:25%; background:#444;}
-        .box1>p:nth-child(10) { width:50%; background:url(../img/m5.jpg) no-repeat right center; background-size:cover;}
-        .box1>p:nth-child(11) { width:25%;	background:#222;}
-
-
-        /* box2 */
-        .box2>p {text-align:center; height:25%; float:left;}
-        .box2>p:nth-child(1) { width:25%; background:#444;}
-        .box2>p:nth-child(2) { width:25%; background:url(../img/w1.jpg) no-repeat center bottom; background-color:#fff; background-size:contain;}
-        .box2>p:nth-child(3) { width:50%; background:#222;}
-        .box2>p:nth-child(4) { width:25%; height:49.9%; background:url(../img/w2.jpg) no-repeat right top; background-color:#fff;	background-size:cover;}
-        .box2>p:nth-child(5) { width:50%; height:49.9%; background:#fff;	background:url(../img/w3.jpg) no-repeat center center;	background-size:cover;}
-        .box2>p:nth-child(6) { width:25%; background:url(../img/w4.jpg) no-repeat center center;	background-color:#fff;	background-size:contain;}
-        .box2>p:nth-child(7) { width:25%; background:#555;}
-        .box2>p:nth-child(8) { width:25%; background:#fff;	background:url(../img/w5.jpg) no-repeat center center; background-size:cover;}
-        .box2>p:nth-child(9) { width:25%; background:#555;}
-        .box2>p:nth-child(10) { width:25%;	background:url(../img/w6.jpg) no-repeat center top; background-size:cover;}
-        .box2>p:nth-child(11) { width:25%;	background:#fff;	background:url(../img/w7.jpg) no-repeat center center; background-size:cover;}
-
-
-        /* box3 */
-        .box3>p {	width:25%;height:25%; float:left;}
-        .box3>p:nth-child(1) { width:50%;height:100%; background:#fff; background:url(../img/k1.jpg) no-repeat center top; background-size:cover;}
-        .box3>p:nth-child(2) { background:#555;}
-        .box3>p:nth-child(3) { background:url(../img/k2.jpg) no-repeat center center; background-size:cover;}
-        .box3>p:nth-child(4) { width:50%; background:#222;}
-        .box3>p:nth-child(5) { height:50%; background:url(../img/k3.jpg) no-repeat center top; background-size:cover;}
-        .box3>p:nth-child(6) { background:#777;}
-        .box3>p:nth-child(7) { background:url(../img/k4.jpg) no-repeat center center;	background-size:cover;}
-        
-
-    </style>
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $(".btnMenu").click(function(){
-                $("nav").addClass("on");
-                $("section").addClass("on");
-            });
-            $("nav li").click(function(){
-                $("nav").removeClass("on");
-                $("section").removeClass("on");
-
-                var index=$(this).index(); // 선택한 li의 인덱스 구하기
-                $("section>div").removeClass("on"); //먼저 붙어있는 on을 제거
-                $("section>div").eq(index).addClass("on"); // 메뉴와 같은 순서의 div에 on을 붙임
-            });
-        });
-    </script>
+    <!--파비콘-->
+    <link rel="icon" type="image/x-icon" href="/img/logo-favo.ico">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-    <div class="wrap">
-        <!-- nav 영역을 호출할 버튼  -->
-        <a class="btnMenu" href="#"><i class="fa fa-navicon"></i> </a>
-        
-        <!-- 실제 카테고리 메뉴가 들어갈 nav 영역 -->
-        <nav>
-            <h1><img src="img/logo.png" /></h1>
-            <ul id="gnb">
-                <li><a href="#">Homme</a></li>
-                <li><a href="#">Girl</a></li>
-                <li><a href="#">Kids</a></li>
-            </ul>
-        </nav>
-
-        <!-- 3개의 컨텐츠 박스가 들어갈 section 영역 -->
-	    <section>
-            <div class="box1 on">  
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
-            <div class="box2">      
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>      
-            <div class="box3">      
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
-        </section>
+    <div class="video-background">
+        <div class="video-foreground">
+            <iframe width="1174" height="660" src="https://www.youtube.com/embed/C30_K8A6loo?autoplay=1&mute=1&loop=1&playlist=C30_K8A6loo" title="Patek Philippe Grande Sonnerie Ref 6301P" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
+
+    <!-- 로고 -->
+	<h1><img src="img/logo.webp" /></h1>
+	
+	<!-- header -->
+	<header>		
+		<ul id="gnb">
+			<li  class="on">
+				<a href="#"><em><div><i id="moveIcon" class="fa fa-angle-double-down" aria-hidden="true"></i></div>Home</em></a>
+                <ul>
+					<li><a href="#"><em>English</em></a></li>
+                    <li><a href="#"><em>Italino</em></a></li>	
+                    <li><a href="#"><em>简体中文</em></a></li>
+                    <li><a href="#"><em>日本語</em></a></li>				
+				</ul>				
+			</li>                                       
+			<li>
+				<a href="#"><em>COLLECTION</em></a>	
+                <ul>
+					<li><a href="#"><em>Grand Complications</em></a></li>
+					<li><a href="#"><em>Conplications</em></a></li>
+					<li><a href="#"><em>Calatrava</em></a></li>
+					<li><a href="#"><em>Gondolo</em></a></li>
+				</ul>					
+			</li>                           
+			<li>
+				<a href="#"><em> COMPANY</em></a>	
+                <ul>
+					<li><a href="#"><em>The Manufacture</em></a></li>
+					<li><a href="#"><em>Savoir-faire</em></a></li>
+					<li><a href="#"><em>Patek Philippe Museum</em></a></li>		
+				</ul>		
+			</li>
+			<li>
+				<a href="#"><em>RETAIL &amp; SERVICE</em></a>
+                <ul>
+                    <li><a href="#"><em>Patek Philippe Salons</em></a></li>
+                    <li><a href="#"><em>Authorized Retailers</em></a></li>
+                    <li><a href="#"><em>Distributors</em></a></li>
+                    <li><a href="#"><em>Service Centers</em></a></li>
+                    <li><a href="#"><em>Servieces</em></a></li>
+                </ul>			
+			</li>
+			<li>
+				<a href="#"><em>HISTORY</em></a>
+                <ul>
+					<li><a href="#"><em>1839-1877</em></a></li>
+                    <li><a href="#"><em>1878-1931</em></a></li>	
+                    <li><a href="#"><em>1932-1949</em></a></li>
+                    <li><a href="#"><em>1950-1988</em></a></li>
+                    <li><a href="#"><em>1989-2019</em></a></li>
+                    <li><a href="#"><em>Movies</em></a></li>		
+				</ul>		
+			</li>	
+        
+		</ul>
+            
+	</header>
+
+    <!-- sns 버튼모음 -->
+	<ul id="sns">
+		<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+		<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+		<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+	</ul>
 </body>
 </html>
